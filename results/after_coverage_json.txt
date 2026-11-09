@@ -1,0 +1,6 @@
+lab9_Reem_Saab / after
+PS ...\lab9_Reem_Saab\after> python -m coverage json -o ../results/after_coverage.json
+
+Wrote JSON report to ../results/after_coverage.json
+
+Exit code: 0

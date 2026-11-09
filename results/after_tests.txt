@@ -1,0 +1,19 @@
+lab9_Reem_Saab / after
+PS ...\lab9_Reem_Saab\after> python -m unittest discover -v
+
+test_fast_function (test_profiler.TestProfiler) ... ok
+test_legacy_fast_matches_optimized (test_profiler.TestProfiler) ... ok
+test_main_calls_all_tasks (test_profiler.TestProfiler) ... ok
+test_memory_intensive_function (test_profiler.TestProfiler) ... ok
+test_slow_function (test_profiler.TestProfiler) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 5.547s
+
+OK
+optimized_fast_function: 0.000002100 seconds; result=328350
+memory_intensive_function: 3.460202 seconds; result=333333283333335000000
+RSS before=20.992 MiB; after=20.996 MiB; delta=+0.004 MiB
+slow_function: 2.016201 seconds; result=333283335000
+
+Exit code: 0

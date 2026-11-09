@@ -1,0 +1,41 @@
+lab9_Reem_Saab / after
+PS ...\lab9_Reem_Saab\after> python -m memory_profiler profiler_memoryprofiler.py
+
+Filename: profiler_memoryprofiler.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+     6     20.3 MiB     20.3 MiB           1   @profile
+     7                                         def slow_function():
+     8     20.3 MiB      0.0 MiB           1       time.sleep(2)
+     9     20.3 MiB      0.0 MiB           1       total = 0
+    10     20.3 MiB      0.0 MiB       10001       for i in range(10000):
+    11     20.3 MiB      0.0 MiB       10000           total += i ** 2
+    12     20.3 MiB      0.0 MiB           1       return total
+
+
+Filename: profiler_memoryprofiler.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    30     20.3 MiB     20.3 MiB           1   @profile
+    31                                         def optimized_fast_function():
+    32                                             """Sum the same squares with the exact closed form, using integer arithmetic."""
+    33     20.3 MiB      0.0 MiB           1       n = 100
+    34     20.3 MiB      0.0 MiB           1       return n * (n - 1) * (2 * n - 1) // 6
+
+
+Filename: profiler_memoryprofiler.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    22     20.3 MiB     20.3 MiB           1   @profile
+    23                                         def memory_intensive_function():
+    24     20.3 MiB      0.0 MiB           1       total = 0
+    25     20.4 MiB -528215.5 MiB    10000001       for i in range(10000000):
+    26     20.4 MiB -528215.5 MiB    10000000           total += i ** 2
+    27     20.3 MiB     -0.1 MiB           1       return total
+
+
+
+Exit code: 0

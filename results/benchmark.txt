@@ -1,0 +1,6 @@
+lab9_Reem_Saab
+Command: python benchmark.py
+7 repeats, 20000 calls per repeat; equal result: 328350
+before: 30.742045 microseconds/call; tracemalloc peak: 116 bytes
+after: 0.244125 microseconds/call; tracemalloc peak: 56 bytes
+Small-function speedup: 125.93x

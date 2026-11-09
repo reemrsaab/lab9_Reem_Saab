@@ -1,0 +1,43 @@
+lab9_Reem_Saab / after
+PS ...\lab9_Reem_Saab\after> python profiler_lineprofiler.py
+
+Timer unit: 1e-07 s
+
+Total time: 2.02742 s
+File: after\profiler.py
+Function: slow_function at line 5
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     5                                           def slow_function():
+     6         1   20074236.0 2.01e+07     99.0      time.sleep(2)
+     7         1         26.0     26.0      0.0      total = 0
+     8     10001      46082.0      4.6      0.2      for i in range(10000):
+     9     10000     153843.0     15.4      0.8          total += i ** 2
+    10         1         11.0     11.0      0.0      return total
+
+Total time: 5.4e-06 s
+File: after\profiler.py
+Function: optimized_fast_function at line 27
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    27                                           def optimized_fast_function():
+    28                                               """Sum the same squares with the exact closed form, using integer arithmetic."""
+    29         1         14.0     14.0     25.9      n = 100
+    30         1         40.0     40.0     74.1      return n * (n - 1) * (2 * n - 1) // 6
+
+Total time: 6.29093 s
+File: after\profiler.py
+Function: memory_intensive_function at line 20
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    20                                           def memory_intensive_function():
+    21         1          7.0      7.0      0.0      total = 0
+    22  10000001   14325893.0      1.4     22.8      for i in range(10000000):
+    23  10000000   48583355.0      4.9     77.2          total += i ** 2
+    24         1          5.0      5.0      0.0      return total
+
+
+Exit code: 0

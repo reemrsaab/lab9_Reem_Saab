@@ -1,0 +1,18 @@
+lab9_Reem_Saab / before
+PS ...\lab9_Reem_Saab\before> python -m coverage run -m unittest discover -v
+
+test_fast_function (test_profiler.TestProfiler) ... ok
+test_main_calls_all_tasks (test_profiler.TestProfiler) ... ok
+test_memory_intensive_function (test_profiler.TestProfiler) ... ok
+test_slow_function (test_profiler.TestProfiler) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 7.657s
+
+OK
+fast_function: 0.000072900 seconds; result=328350
+memory_intensive_function: 5.543540 seconds; result=333333283333335000000
+RSS before=26.035 MiB; after=26.039 MiB; delta=+0.004 MiB
+slow_function: 2.035943 seconds; result=333283335000
+
+Exit code: 0

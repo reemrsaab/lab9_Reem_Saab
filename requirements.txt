@@ -1,0 +1,6 @@
+coverage==7.16.2
+line_profiler==5.1.0
+memory-profiler==0.61.0
+psutil==7.2.2
+tomli==2.5.0
+typing_extensions==4.16.0
