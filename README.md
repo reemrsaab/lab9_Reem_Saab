@@ -10,7 +10,7 @@ profiling evidence, coverage HTML, and the combined Word report.
 - `before/`: original workload and its line profiler, memory profiler, tests and coverage HTML.
 - `after/`: optimized workload and the same profiling tools, tests and coverage HTML.
 - `results/`: actual command outputs, environment details, coverage JSON and repeated timings.
-- `screenshots/`: recorded command-output snapshots used in the report.
+- `screenshots/`: original PowerShell screenshots for both versions, plus earlier transcript images.
 - `lab9_Reem_Saab.docx`: analysis and before/after output snapshots.
 - `submission.txt`: repository link for submission.
 
@@ -69,7 +69,12 @@ Performance measurements should be interpreted using the uninstrumented run.
 The extra main-dispatch test uses mocks to verify all three functions are called.
 The remaining uncovered line invokes the entry point under the `__main__` guard.
 
-Snapshots are typeset from the saved command transcripts; the transcripts are
-included alongside them for inspection. They are output captures, rather than
-desktop screenshots. Absolute source paths are shortened to repository-relative
-paths. No elapsed times or profiling values are invented.
+The report now uses actual PowerShell screenshots named `terminal_before_part1.png`
+through `terminal_before_part3.png` and `terminal_after_part1.png` through
+`terminal_after_part3.png`. Full originals are preserved. Word crops the displayed
+views to the relevant output and uses landscape pages for readability.
+The report's cProfile totals and RSS comparison use these screenshot runs.
+Earlier saved command transcripts and the repeated benchmark are separate runs;
+timings naturally differ. The earlier typeset transcript images remain available
+as supplementary evidence. Absolute source paths in the saved transcripts are
+shortened to repository-relative paths.
