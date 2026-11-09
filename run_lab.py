@@ -24,6 +24,9 @@ def run(variant, label, args):
     if result.returncode:
         print(result.stdout, flush=True)
         raise RuntimeError(command)
+    if label == 'coverage_html':
+        (folder / 'htmlcov' / '.gitignore').write_text(
+            '# Coverage HTML is included in the lab submission.\n', encoding='utf-8')
 
 
 if __name__ == '__main__':
